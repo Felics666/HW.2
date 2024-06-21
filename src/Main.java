@@ -56,6 +56,9 @@ public class Main {
         } else if (age2 >= 7 && age2 <= 18) {
             System.out.println("Если возраст человека равен - " + age2 + ", то ему нужно ходить в школу.");
         }
+        else if(age2 >= 19 && age2 <= 23 ){
+            System.out.println();
+        }
 
     }
 }
