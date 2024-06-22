@@ -1,13 +1,13 @@
-import java.util.Scanner; /// Вызов класса позволяющего запросить ввод с клавиатыры
+import java.util.Scanner; /// Подключение библиотеки
 
 public class Main {
     public static void main(String[] args) {
         ///Задача 1
         System.out.println("Задача 1");
 
-        Scanner scanner = new Scanner(System.in); /// Даем понять от куда запрашивать данные
+        Scanner read = new Scanner(System.in); ///Создаем обьект, даем понять от куда запрашивать данные
         System.out.print("Введите возраст человека: ");
-        int age = scanner.nextInt(); ///используем двнные введеные пользователем
+        int age = read.nextInt(); ///используем двнные введеные пользователем
 
         if (age >= 18) {
             System.out.println("Если возраст человека равен - " + age + ", то он совершеннолетний");
@@ -20,7 +20,7 @@ public class Main {
         System.out.println("Задача 2");
 
         System.out.print("Введите температуру на улице ");
-        int temperature = scanner.nextInt();
+        int temperature = read.nextInt();
 
         if (temperature < 5) {
 
@@ -34,7 +34,7 @@ public class Main {
         System.out.println("Задача 3");
 
         System.out.print("Введите скорость водителя ");
-        int speed = scanner.nextInt();
+        int speed = read.nextInt();
 
         if (speed > 60) {
             System.out.println("Если скорость - " + speed + ", то придется заплатить штраф");
@@ -47,17 +47,25 @@ public class Main {
         System.out.println("Задача 4");
 
         System.out.print("Введите возраст человека ");
-        int age2 = scanner.nextInt();
+        int age2 = read.nextInt();
+        //boolean school = age2 > 7 && age2 <= 18;
 
         if (age2 < 2) {
             System.out.println("Если возраст человека равен - " + age2 + ", то ему пора спать.");
-        } else if (age2 >= 2 && age2 <= 6) {
+        }
+        if (age2 >= 2 && age2 <= 6) {
             System.out.println("Если возраст человека равен - " + age2 + ", то ему нужно ходить в детский сад.");
-        } else if (age2 >= 7 && age2 <= 18) {
+        }
+        if (age2 >= 7 && age2 <= 18) {
             System.out.println("Если возраст человека равен - " + age2 + ", то ему нужно ходить в школу.");
         }
-        else if(age2 >= 19 && age2 <= 23 ){
-            System.out.println();
+        if (age2 > 18 && age2 < 24) {
+            System.out.println("Если возраст человека равен - " + age2 + ", то ему нужно ходить в университет");
+        }
+        if(age2 >= 24 && age2 <= 60){
+            System.out.println("Если возраст человека равен - " + age2 + ", то ему нужно ходить на работу");
+        }else{
+            System.out.println("Если возраст человека равен - " + age2 + ", то ему необходим отдых" );
         }
 
     }
